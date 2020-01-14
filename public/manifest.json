@@ -1,6 +1,6 @@
 {
     "name": "Instagram as Progressive Web App",
-    "short-name": "PWAGram",
+    "short_name": "PWAGram",
     "icons": [
         {
             "src": "/src/images/icons/app-icon-48x48.png",
@@ -38,12 +38,12 @@
             "sizes": "512x512"
         }
     ],
-    "start-url": "/index.html",
+    "start_url": ".",
     "scope": ".",
     "display": "standalone",
     "orientation": "portrait-primary",
-    "background-color": "#fff",
-    "theme-color": "#3F51B5",
+    "background_color": "#fff",
+    "theme_color": "#3F51B5",
     "description": "A simple Instagram CLone, implementing a lot of PWA functions",
     "dir": "ltr",
     "lang": "en-US",
