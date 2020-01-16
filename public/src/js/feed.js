@@ -7,7 +7,10 @@ const url = 'https://pwagram-e92a4.firebaseio.com/posts.json';
 let networkDataReceived = false;
 
 const openCreatePostModal = () => {
-  createPostArea.style.display = 'block';
+  // createPostArea.style.display = 'block';
+  // setTimeout(() => {
+  createPostArea.style.transform = 'translateY(0)';
+  // }, 1);
   if (deferredPrompt) {
     deferredPrompt.prompt();
     deferredPrompt.userChoice.then((choiceResult) => {
@@ -32,7 +35,7 @@ const openCreatePostModal = () => {
 }
 
 const closeCreatePostModal = () => {
-  createPostArea.style.display = 'none';
+  createPostArea.style.transform = 'translateY(100vh)';
 }
 
 const createCard = (data) => {
@@ -42,7 +45,6 @@ const createCard = (data) => {
   cardTitle.className = 'mdl-card__title';
   cardTitle.style.backgroundImage = 'url("' + data.image + '")';
   cardTitle.style.backgroundSize = 'cover';
-  cardTitle.style.height = '180px';
   cardWrapper.appendChild(cardTitle);
   let cardTitleTextElement = document.createElement('h2');
   cardTitleTextElement.style.color = 'white';
